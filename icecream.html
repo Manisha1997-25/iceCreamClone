@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NaturalsIcecreamClone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        header {
+            font-weight: 550;
+        }
+
+        img {
+            height: 40px;
+            width: 150px;
+        }
+
+        .Imgg {
+            height: 50px;
+            width: 60px;
+        }
+
+        .padd {
+            border-right: 1px solid #a59e9e;
+        }
+
+
+        .search {
+            height: 50px;
+            background-color: #a59e9e;
+            position: relative;
+
+            text-align: center;
+            align-self: center;
+            display: flex;
+            /* */
+        }
+
+        .search i {
+            height: 50px;
+            width: 50px;
+            color: white;
+            background-color: green;
+            padding: 2px 2px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .searchItem {
+            border: none;
+            outline: none;
+            font-size: 15px;
+            background-color: #a59e9e;
+        }
+
+        .nav-item {
+            color: white !important;
+        }
+
+        .container-fluid {
+            padding-top: 100px;
+            padding-left: 100px;
+            /* display: flex; */
+
+        }
+
+        .containerr {
+            height: 50px;
+            width: 100%;
+            align-items: center;
+            padding-left: 300px;
+            padding-right: 250px;
+            justify-content: space-around;
+
+        }
+
+        .navbar-nav {
+
+            gap: 30px;
+            padding-left: 50px;
+
+
+        }
+
+        .nav-link {
+            color: white;
+
+        }
+
+        .nav-link:hover {
+            color: #0f940f;
+
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .customLine {
+            border-right: 3px solid rgba(255, 255, 255, 0.5);
+            padding-left: 30px;
+        }
+
+        .customSocailIcons {
+            font-size: 30px;
+            padding: 5px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .customSocailIcons:hover {
+            background-color: white;
+            color: #1b651b;
+            border-radius: 50%;
+            transform: translateY(-12px) scale(1.07);
+        }
+
+        .customCard {
+            width: 18rem;
+
+        }
+
+        .mangoEffect {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .customCard:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        .customCoroContainer {
+            width: 100%;
+            height: 600px;
+        }
+
+        .customIMGCORO {
+            display: block;
+            width: 100%;
+            height: 600px;
+        }
+
+        .search input {
+            background-color: #e7e4e4;
+            border: none;
+        }
+
+        .search i {
+            font-size: 20px;
+
+            padding-top: 15px;
+        }
+
+        .CustomCardImg {
+            width: 38rem;
+            overflow: hidden;
+        }
+
+        .imgCard {
+            width: 100%;
+            height: 300px;
+            border-radius: 2px;
+            transition: transform 0.4s ease;
+        }
+
+        .imgCard:hover {
+            transform: scale(1.1);
+
+        }
+
+        .changeCLR {
+            color: #797474;
+        }
+
+        .CustomDeco button {
+            margin-top: 50px;
+            padding: 10px 30px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .CustomDeco p {
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            color: white;
+            font-size: 22px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 8px;
+            margin-top: 20px;
+        }
+
+        .CustomDeco img {
+            height: 70px;
+            width: 250px;
+            margin-bottom: 50px;
+
+        }
+
+        .imgStyle {
+            height: 350px;
+            width: 300px;
+
+        }
+        .shadowCard{
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .scrollUP:hover i {
+            animation: moveDownOnce 05s ease;
+        }
+
+        @keyframes moveDownOnce {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+
+
+        /* Tablet & Mobile */
+        @media screen and(max-width: 576px) {
+
+            .navbar {
+                padding: 10px 0;
+            }
+
+            .navbar-toggler {
+                margin-left: auto;
+            }
+
+            .navbar-collapse {
+                background: #212529;
+                margin-top: 10px;
+                border-radius: 5px;
+            }
+
+            .navbar-nav {
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .navbar-nav .nav-item {
+                border-bottom: 1px solid rgba(255, 255, 255, .15);
+            }
+
+            .navbar-nav .nav-item:last-child {
+                border-bottom: none;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 14px;
+                color: white;
+            }
+
+            .dropdown-menu {
+                background: #2f2f2f;
+                border: none;
+                text-align: center;
+            }
+
+            .dropdown-item {
+                color: white;
+            }
+
+            .dropdown-item:hover {
+                background: #198754;
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <header class="text-center bg-success text-white py-1">*This is only a brand name and does not represents its true
+        nature.
+    </header>
+
+
+
+    <div class="d-flex justify-content-around mt-4 mb-4">
+        <div class="d-flex ">
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="px-4 padd">
+                <img src="./naturals1.jpg" alt="">
+                <br>
+                <p class="fs-6">TASTE THE ORIGINAL<sup>*</sup></p>
+            </div>
+            <div class="px-3">
+                <img src="./celeb.jpg" alt="" class="Imgg">
+            </div>
+            <div class="px-3 pt-2">
+                <button class="btn btn-success">Order Now</button>
+            </div>
+        </div>
+        <div class="search">
+            <input type="email" size="45" placeholder="I'm looking for...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- toggle button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
+                <ul class="navbar-nav text-center  mx-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" aria-current="page" href="./treatToTree.html">Tree To Treat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Our Legacy</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Seasonal</a></li>
+                            <li><a class="dropdown-item" href="#">Malai</a></li>
+                            <li><a class="dropdown-item" href="#">Dry Fruits</a></li>
+                            <li><a class="dropdown-item" href="#">Special</a></li>
+                            <li><a class="dropdown-item" href="#">Chocklate</a></li>
+                            <li><a class="dropdown-item" href="#">No Added Sugar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Malai Magic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Franchise Queries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Store Locator</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="container-fluid p-0 customCoroContainer">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./caro13.jpg" class="customIMGCORO" alt="...">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div> -->
+                </div>
+                <div class="carousel-item">
+                    <img src="./caro12.jpg" class="customIMGCORO" alt="...">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div> -->
+                </div>
+                <div class="carousel-item">
+                    <img src="./caro15.jpg" class="customIMGCORO" alt="...">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div> -->
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+    </div>
+    <section style="background-color: #eff1ce;">
+        <div class="container-fluid p-5">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card mb-4">
+                        <img src="./card1.png" class="card-img imgCard" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <img src="./card2.png" class="card-img imgCard" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <img src="./card3.png" class="card-img imgCard" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <img src="./card4.png" class="card-img imgCard" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="SeasonalSection" style="background-color: #eff1ce;">
+        <h1 class="text-center mb-5 pt-5">SEASONAL BEST</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card customCard">
+                        <img src="./mangoIce.png" class="card-img-top mangoEffect" alt="">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mango IceCream</h5>
+                        </div>
+                        <div class="d-grid mb-2">
+                            <button class="btn btn-success mx-auto px-4">Buy</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card customCard" style="width: 18rem ;">
+                        <img src="./tenderCOCO.png" class="card-mg-top mangoEffect" alt="">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">TEnder coconut naga chilli</h5>
+                        </div>
+                        <div class="d-grid mb-2">
+                            <button class="btn btn-success mx-auto px-4">Buy</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card customCard" style="width: 18rem;">
+                        <img src="./ice2.png" class="card-mg-top mangoEffect" alt="">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0">COFFEE FUDGE ICECREAM</h5>
+                        </div>
+                        <div class="d-grid mb-2">
+                            <button class="btn btn-success mx-auto px-4">Buy</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card customCard mb-5" style="width: 18rem;">
+                        <img src="./ice.png" class="card-mg-top mangoEffect" alt="">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">PineApple-Papaya IceCream</h5>
+                        </div>
+                        <div class="d-grid mb-2">
+                            <button class="btn btn-success mx-auto px-4">Buy</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card customCard mb-5" style="width: 18rem;">
+                        <img src="./psgIce.png" class="card-mg-top mangoEffect" alt="">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">PSG ICE IceCream</h5>
+                        </div>
+                        <div class="d-grid mb-2">
+                            <button class="btn btn-success mx-auto px-4">Buy</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card customCard mb-5" style="width: 18rem;">
+                        <img src="./kalaJamun.png" class="card-mg-top mangoEffect" alt="">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">KALA JAMUN</h5>
+                        </div>
+                        <div class="d-grid mb-2">
+                            <button class="btn btn-success mx-auto px-4">Buy</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h2 class="text-center py-5">Ingredient Story</h2>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <img src="./milk.jpg" alt="" class="img-fluid rounded-circle">
+                    <h3>1.Milk</h3>
+                    <p class="py-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae
+                        placeat maxime molestiae vero architecto eos provident necessitatibus, labore sunt.</p>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <img src="./fruit.jpg" alt="" class="img-fluid rounded-circle">
+                    <h3>2.Fruits</h3>
+                    <p class="py-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae
+                        placeat maxime molestiae vero architecto eos provident necessitatibus, labore sunt.</p>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <img src="./Sugar.jpg" alt="" class="img-fluid rounded-circle">
+                    <h3>3.Sugar</h3>
+                    <p class="py-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae
+                        placeat maxime molestiae vero architecto eos provident necessitatibus, labore sunt.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-0">
+            <img src="./backgroundImg.png" alt="" class="img-fluid w-100">
+        </div>
+        <div class="container py-5">
+            <img src="franchiseImage.png" alt="" class="img-fluid rounded-3 w-100 " style="height: 350px;">
+        </div>
+
+        <div class="container-fluid w-100 p-3">
+            <h1 class="text-center py-4">FOLLOW <a href="#" class="text-decoration-none fs-3 text-success">@naturalicecream</a> ON INSTAGRAM </h1>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-3">
+                
+                <div class="col">
+                    <img src="./Insta1.png" alt="" class="img-fluid imgStyle">
+                </div>
+                <div class="col">
+                    <img src="./Insta2.png" alt="" class="img-fluid imgStyle">
+                </div>
+                <div class="col">
+                    <img src="./Insta3.png" alt="" class="img-fluid imgStyle">
+                </div>
+                <div class="col">
+                    <img src="./Insta4.png" alt="" class="img-fluid imgStyle">
+                </div>
+                <div class="col">
+                    <img src="./Insta5.png" alt="" class="img-fluid imgStyle">
+                </div>
+
+            </div>
+            <div class="text-center mt-3">
+                <a href="#" class="btn btn-success">Load More</a>
+                <a href="#" class="btn btn-primary"><i class="fa-brands fa-instagram"></i>Follow on Instagram</a>
+            </div>
+        </div>
+        <div class="container pb-3 pt-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadowCard" style="height: 350px;">
+                        <div class="card-body text-center">
+                            <h3 class="text-center pt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+                                voluptates!</h3>
+                            <p class="card-text  px-5 py-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                                aspernatur repudiandae eius quaerat, autem alias provident deserunt minima quod a
+                                magnam. Porro quasi saepe sunt aliquam harum eius nam maiores? Lorem ipsum dolor sit,
+                                amet consectetur adipisicing elit. Laudantium, fugiat cupiditate consectetur expedita
+                                quia perspiciatis repellendus qui commodi cum aperiam quo sit ab, ducimus eos ipsa, ea
+                                quaerat repudiandae quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                facere eius consectetur nobis, eveniet voluptas? Magnam inventore quibusdam earum nam.
+                            </p>
+                            <a href="#" class="btn btn-success text-center">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="bg-success">
+            <div class="text-center CustomDeco">
+                <button class="btn btn-dark">OrderNow</button>
+                <p>Also available on</p>
+                <a href="#">
+                    <img src="./swiggy.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="./zomato.png" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <footer>
+            <div class="container-fluid bg-dark">
+                <div class="row">
+
+                    <div class="col-12 col-md-6 col-lg-3 customLine">
+                        <h5 class="changeCLR">CONTACT US</h5>
+                        <P class="text-white">Plot 55 ABCD & 56 D, Kandivali Industrial Estate, Charkop, Kandivali (W),
+                            Mumbai
+                            -
+                            400 067.</P>
+                        <div class="d-flex align-items-center ">
+                            <i class="fa-solid fa-envelope text-white fs-3"></i>
+                            <p class="text-white py-2 ">customercare@naturalicecreams.in</p>
+                        </div>
+                        <div class="d-flex align-items-center ">
+                            <i class="fa-solid fa-headset text-white fs-3"></i>
+                            <p class="text-white py-2 ">9999999999</p>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 customLine">
+                        <h5 class="changeCLR">ABOUT NATURALS</h5>
+                        <a href="#" class="link-light nav-link">Tree To Treat</a>
+
+                        <a href="#" class="link-light nav-link">Our Legacy</a>
+                        <a href="#" class="link-light nav-link">Franchise Queries</a>
+                        <h5 class="changeCLR mt-4">FRANCHISE QUERIES</h5>
+                        <a href="#" class="link-light nav-link">Become a Business Partner</a>
+                        <a href="#" class="link-light nav-link">Franchise FAQ</a>
+
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 customLine">
+                        <h5 class="changeCLR">OTHERS</h5>
+                        <a href="#" class="link-light nav-link">Artist Collaboration</a>
+                        <a href="#" class="link-light nav-link">Store Locator</a>
+                        <a href="#" class="link-light nav-link">CSR</a>
+                        <a href="#" class="link-light nav-link">Legal</a>
+                        <a href="#" class="link-light nav-link">Nutritional Info</a>
+                        <a href="#" class="link-light nav-link">Careers</a>
+                        <a href="#" class="link-light nav-link">Blogs</a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 customLine">
+                        <h5 class="changeCLR">SHOP</h5>
+                        <a href="#" class="link-light nav-link">Seasonal</a>
+                        <a href="#" class="link-light nav-link">Malai</a>
+                        <a href="#" class="link-light nav-link">Dry Fruits</a>
+                        <a href="#" class="link-light nav-link">Chocklate</a>
+                        <a href="#" class="link-light nav-link">Special</a>
+                        <a href="#" class="link-light nav-link">No added Sugar</a>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="container text-center mt-5 ">
+                        <i class="fa-brands fa-whatsapp customSocailIcons"></i>
+                        <i class="fa-brands fa-instagram customSocailIcons"></i>
+                        <i class="fa-brands fa-facebook customSocailIcons"></i>
+                        <i class="fa-brands fa-youtube customSocailIcons"></i>
+                        <i class="fa-brands fa-x-twitter customSocailIcons"></i>
+                        <i class="fa-brands fa-linkedin customSocailIcons"></i>
+
+                    </div>
+                    <div>
+                        <a href="#top"
+                            class="position-fixed scrollUP bottom-0 end-0 m-4 btn btn-light rounded-circle shadow p-2">
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
