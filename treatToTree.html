@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* header */
+        header {
+            font-weight: 550;
+        }
+        img {
+            height: 40px;
+            width: 150px;
+        }
+        .Imgg {
+            height: 50px;
+            width: 60px;
+        }
+        .padd {
+            border-right: 1px solid #a59e9e;
+        }
+        .search {
+            height: 50px;
+            background-color: #a59e9e;
+            position: relative;
+
+            text-align: center;
+            align-self: center;
+            display: flex;
+            /* */
+        }
+        .search i {
+            height: 50px;
+            width: 50px;
+            color: white;
+            background-color: green;
+            padding: 2px 2px;
+            align-items: center;
+            text-align: center;
+            font-size: 20px;
+            padding-top: 15px;
+        }
+        .navbar-nav {
+            gap: 30px;
+            padding-left: 50px;
+        }
+        .nav-link {
+            color: white;
+        }
+        .nav-link:hover {
+            color: #0f940f;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        /* Tablet & Mobile */
+        @media screen and(max-width: 576px) {
+
+            .navbar {
+                padding: 10px 0;
+            }
+
+            .navbar-toggler {
+                margin-left: auto;
+            }
+
+            .navbar-collapse {
+                background: #212529;
+                margin-top: 10px;
+                border-radius: 5px;
+            }
+
+            .navbar-nav {
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .navbar-nav .nav-item {
+                border-bottom: 1px solid rgba(255, 255, 255, .15);
+            }
+
+            .navbar-nav .nav-item:last-child {
+                border-bottom: none;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 14px;
+                color: white;
+            }
+
+            .dropdown-menu {
+                background: #2f2f2f;
+                border: none;
+                text-align: center;
+            }
+
+            .dropdown-item {
+                color: white;
+            }
+
+            .dropdown-item:hover {
+                background: #198754;
+                color: white;
+            }
+        }
+        .search input {
+            background-color: #e7e4e4;
+            border: none;
+        }
+        
+
+        
+        /* main content */
+        .customImage {
+            width: 100%;
+            height: auto;
+        }
+
+        .customIMGCOL {
+            width: 100%;
+            height: auto;
+        }
+
+        .customImg {
+            height: 400px;
+            width: 100%;
+        }
+
+
+        /* footer */
+        .customLine {
+            border-right: 3px solid rgba(255, 255, 255, 0.5);
+            padding-left: 30px;
+        }
+
+        .customSocailIcons {
+            font-size: 30px;
+            padding: 5px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .customSocailIcons:hover {
+            background-color: white;
+            color: #1b651b;
+            border-radius: 50%;
+            transform: translateY(-12px) scale(1.07);
+        }
+        .changeCLR {
+            color: #797474;
+        }
+        .container-fluid {
+            padding-top: 100px;
+            padding-left: 100px;
+            /* display: flex; */
+
+        }
+        .scrollUP:hover i {
+            animation: moveDownOnce 05s ease;
+        }
+
+        @keyframes moveDownOnce {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+
+<body >
+<header class="text-center bg-success text-white py-1">*This is only a brand name and does not represents its true
+        nature.
+    </header>
+
+
+
+    <div class="d-flex justify-content-around mt-4 mb-4">
+        <div class="d-flex ">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="px-4 padd">
+                <img src="./naturals1.jpg" alt="">
+                <br>
+                <p class="fs-6">TASTE THE ORIGINAL<sup>*</sup></p>
+            </div>
+            <div class="px-3">
+                <img src="./celeb.jpg" alt="" class="Imgg">
+            </div>
+            <div class="px-3 pt-2">
+                <button class="btn btn-success">Order Now</button>
+            </div>
+        </div>
+        <div class="search">
+            <input type="email" size="45" placeholder="I'm looking for...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- toggle button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
+                <ul class="navbar-nav text-center  mx-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" aria-current="page" href="#treatToTree">Tree To Treat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Our Legacy</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Seasonal</a></li>
+                            <li><a class="dropdown-item" href="#">Malai</a></li>
+                            <li><a class="dropdown-item" href="#">Dry Fruits</a></li>
+                            <li><a class="dropdown-item" href="#">Special</a></li>
+                            <li><a class="dropdown-item" href="#">Chocklate</a></li>
+                            <li><a class="dropdown-item" href="#">No Added Sugar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Malai Magic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Franchise Queries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Store Locator</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+<section id="treeToTreat" style="background-color: #eff1ce;">    
+    <div class="container-fluid px-0 mx-0">
+        <img src="./treat1.png" alt="" class="customImage">
+    </div>
+    <section>
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <p class="py-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. In blanditiis deserunt
+                        aliquam neque quos libero quibusdam nemo officia. Fuga eius praesentium possimus culpa? Ex
+                        tempore, repellendus cum perspiciatis ducimus possimus sed nam hic aspernatur consequatur
+                        suscipit, cumque odio repudiandae, repellat nemo accusamus? Hic, illo vel, impedit quas eaque
+                        sit in nobis ipsam, eius tempora beatae dolores. Impedit, doloremque recusandae aut, illo
+                        corrupti labore praesentium molestias accusantium doloribus ipsa possimus quos. Nihil amet, non
+                        ipsum cum vero obcaecati neque eum fuga velit doloribus praesentium, ratione corrupti a ea
+                        expedita modi saepe sunt quia quisquam placeat. Earum fugit quos rerum consequuntur dolorem!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, vero. Nam, rerum. Iusto corporis
+                        unde nemo architecto! Quasi quibusdam ipsa quo at magni impedit ex nulla culpa quos in a
+                        praesentium earum autem, iure dolores facilis perferendis similique sit mollitia reprehenderit
+                        optio ducimus eum laudantium? Ullam rerum repellat eos dignissimos!</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="py-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur unde, id
+                        repudiandae maxime molestiae neque alias ab maiores, consequatur, tenetur facilis sunt
+                        blanditiis officia! Non accusantium impedit autem? Sint iste neque iusto dolorem at laboriosam
+                        quidem impedit velit voluptate ipsum? Excepturi iure modi tenetur ipsam natus odio
+                        necessitatibus, amet voluptatum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container pt-5 pb-5">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="./Papaya.png" alt="" class="customIMGCOL">
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+                    <h1 class="">ART OF MAKING ICE CREAM</h1>
+                    <p class=" text-center py-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
+                        unde, id repudiandae maxime molestiae neque alias ab maiores, consequatur, tenetur facilis sunt
+                        blanditiis officia! Non accusantium impedit autem? Sint iste neque iusto dolorem at laboriosam
+                        quidem impedit velit voluptate ipsum? Excepturi iure modi tenetur ipsam natus odio
+                        necessitatibus, amet voluptatum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="text-center">FAQs</h2>
+
+        <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                       1. What is Treat to Tree by Naturals Ice Cream?
+                    </button>
+                </h2>
+
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Treat to Tree is an initiative where every purchase helps
+                        support tree plantation and environmental sustainability.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faq2">
+                       2. Why does Naturals every flavour begins in nature?
+                    </button>
+                </h2>
+
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Purchase participating products and follow the campaign
+                        instructions to contribute.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faq3">
+                       3. How does Naturals live its Tree to Treat philosophy?
+                    </button>
+                </h2>
+
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        No, registration is not required. Simply participate by
+                        purchasing eligible products.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faq4">
+                       4. Is Tree to Treat a campaign or a long-term philosophy?
+                    </button>
+                </h2>
+
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        No, registration is not required. Simply participate by
+                        purchasing eligible products.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid px-0 mx-0 pb-4">
+            <h2 class="text-center pt-4">SOURCE STORY</h2>
+            <div class="row g-0 pt-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <img src="./ratnagiri.png" alt="" class="customImg">
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <img src="./karnatka.png" alt="" class="customImg">
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <img src="./prayagraj.png" alt="" class="customImg">
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <img src="./saswad.png" alt="" class="customImg">
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<section>
+        <footer>
+            <div class="container-fluid bg-dark">
+                <div class="row">
+
+                    <div class="col-12 col-md-6 col-lg-3 customLine">
+                        <h5 class="changeCLR">CONTACT US</h5>
+                        <P class="text-white">Plot 55 ABCD & 56 D, Kandivali Industrial Estate, Charkop, Kandivali (W),
+                            Mumbai
+                            -
+                            400 067.</P>
+                        <div class="d-flex align-items-center ">
+                            <i class="fa-solid fa-envelope text-white fs-3"></i>
+                            <p class="text-white py-2 ">customercare@naturalicecreams.in</p>
+                        </div>
+                        <div class="d-flex align-items-center ">
+                            <i class="fa-solid fa-headset text-white fs-3"></i>
+                            <p class="text-white py-2 ">9999999999</p>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 customLine">
+                        <h5 class="changeCLR">ABOUT NATURALS</h5>
+                        <a href="#" class="link-light nav-link">Tree To Treat</a>
+
+                        <a href="#" class="link-light nav-link">Our Legacy</a>
+                        <a href="#" class="link-light nav-link">Franchise Queries</a>
+                        <h5 class="changeCLR mt-4">FRANCHISE QUERIES</h5>
+                        <a href="#" class="link-light nav-link">Become a Business Partner</a>
+                        <a href="#" class="link-light nav-link">Franchise FAQ</a>
+
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 customLine">
+                        <h5 class="changeCLR">OTHERS</h5>
+                        <a href="#" class="link-light nav-link">Artist Collaboration</a>
+                        <a href="#" class="link-light nav-link">Store Locator</a>
+                        <a href="#" class="link-light nav-link">CSR</a>
+                        <a href="#" class="link-light nav-link">Legal</a>
+                        <a href="#" class="link-light nav-link">Nutritional Info</a>
+                        <a href="#" class="link-light nav-link">Careers</a>
+                        <a href="#" class="link-light nav-link">Blogs</a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 customLine">
+                        <h5 class="changeCLR">SHOP</h5>
+                        <a href="#" class="link-light nav-link">Seasonal</a>
+                        <a href="#" class="link-light nav-link">Malai</a>
+                        <a href="#" class="link-light nav-link">Dry Fruits</a>
+                        <a href="#" class="link-light nav-link">Chocklate</a>
+                        <a href="#" class="link-light nav-link">Special</a>
+                        <a href="#" class="link-light nav-link">No added Sugar</a>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="container text-center mt-5 ">
+                        <i class="fa-brands fa-whatsapp customSocailIcons"></i>
+                        <i class="fa-brands fa-instagram customSocailIcons"></i>
+                        <i class="fa-brands fa-facebook customSocailIcons"></i>
+                        <i class="fa-brands fa-youtube customSocailIcons"></i>
+                        <i class="fa-brands fa-x-twitter customSocailIcons"></i>
+                        <i class="fa-brands fa-linkedin customSocailIcons"></i>
+
+                    </div>
+                    <div>
+                        <a href="#top"
+                            class="position-fixed scrollUP bottom-0 end-0 m-4 btn btn-light rounded-circle shadow p-2">
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
